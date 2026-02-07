@@ -13,3 +13,12 @@ Si l’API est lente, le composant s’affiche sans données (écran vide), alor
 
 # Quelle différence avec un simple service ?
 Avec un Resolver, le chargement et la vérification des données se font automatiquement avant l’affichage du composant, alors qu’avec un simple service, il faudrait gérer cette logique manuellement dans le composant
+
+# Déffirence entre Subject et BehaviorSubject ?
+- Le BehaviorSubject conserve la dernière valeur émise et nécessite une valeur initiale, tandis que le Subject ne conserve aucune valeur et n’émet que les nouvelles données
+
+# Pourquoi le state ne doit pas etre dans le component ?
+- Le state ne doit pas être stocké dans le composant afin d’éviter un stockage local et temporaire. Il doit être centralisé dans un store ou un service pour être partagé globalement et rester cohérent dans toute l’application
+
+# Rôle d’un service comme source de vérité
+- Le service joue le rôle de source de vérité : il contient la logique métier, gère les appels API  
